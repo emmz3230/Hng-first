@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> stage 2</title>
+</head>
+<body>
+    
+    <body>
+        <section>
+            <div data-testid="slackUserName"> Emmz </div>
+            <div data-testid="slackDisplayImage">
+                <img
+                    
+                    src="./my pic.jpg"
+                    alt="Emmz"
+                />
+            </div>
+            <div data-testid="currentDayOfTheWeek" id="day"></div>
+            <div data-testid="currentUTCTime" id="time"></div>
+            <div data-testid="myTrack">Frontend</div>
+            <div data-testid="githubURL">
+                <a href="https://github.com/Kelvin-Ofili/hng-task-1.git">githubURL</a>
+            </div>
+        </section>
+
+
+<script>
+    function displayCurrentDateTime() {
+        const currentDate = new Date();
+        const dayElement = document.getElementById("day");
+        const timeElement = document.getElementById("time");
+        const dayOptions = {
+            weekday: "long",
+        };
+        const timeOptions = {
+            hour: "numeric",
+            minute: "numeric",
+            second: "numeric",
+            millisecond: "numeric",
+        };
+        const formattedDay = currentDate.toLocaleDateString(undefined, dayOptions);
+        const formattedTime = currentDate.toLocaleTimeString(undefined, timeOptions);
+        dayElement.textContent = `Current Day: ${formattedDay}`;
+        timeElement.textContent = `Current Time: ${formattedTime}`;
+    }
+    // Call the function to display the current date and time
+    displayCurrentDateTime();
+    
+        </script>
+</body>
+    
+    
+</html>
